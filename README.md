@@ -1,4 +1,4 @@
-Calculator
+# Calculator
 This is a CLI C program that is a multi-purpose calculator, with the following modes of calculation:
 Arithmetic Operations
 Matrix Operations (partial support)
