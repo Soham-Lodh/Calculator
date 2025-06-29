@@ -84,13 +84,26 @@ Import Calculator
 :- a
 
 Enter Operation to perform
+
 [+ for addition]
+
+[- for subtraction]
+
+[* for multiplication]
+
+[/ for division]
+
+[% for modulus]
+
+[^ for power]
+
+:- +
 
 Enter first number: 5
 
 Enter second number: 3
 
-Result: 8
+5 + 3 = 8
 
 ## 📌 Notes
 Matrices are dynamically allocated using malloc.
