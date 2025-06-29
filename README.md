@@ -63,14 +63,14 @@ Handles operations between two complex numbers:
 ### • ✖️ Multiplication
 
 # 🛠️ How to Compile and Run
-bash
-Copy code
+
 gcc main.c -o calc
 ./calc
+
+
 You’ll be prompted to select a mode:
 
-pgsql
-Copy code
+
 Import Calculator
 [a for arithmetic calculator]
 [m for matrix calculator]
