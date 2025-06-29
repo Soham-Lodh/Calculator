@@ -64,7 +64,8 @@ Handles operations between two complex numbers:
 
 ## 🛠️ How to Compile and Run
 
-gcc main.c -o calc
+gcc "Main Calculator.c" -o calc
+
 ./calc
 
 
