@@ -72,15 +72,26 @@ You’ll be prompted to select a mode:
 
 
 Import Calculator
+
 [a for arithmetic calculator]
+
 [m for matrix calculator]
+
 [v for vector calculator]
+
 [i for complex calculator]
+
 :- a
-Enter Operation to perform [+ for addition]
+
+Enter Operation to perform
+[+ for addition]
+
 Enter first number: 5
+
 Enter second number: 3
+
 Result: 8
+
 ## 📌 Notes
 Matrices are dynamically allocated using malloc.
 
