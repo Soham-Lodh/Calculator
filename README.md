@@ -1,68 +1,68 @@
-🧮 Calculator
+# 🧮 Calculator
 A CLI-based C program that serves as a multi-purpose calculator, supporting:
 
-📊 Arithmetic Operations
+### • 📊 Arithmetic Operations
 
-🔢 Matrix Operations (partial support)
+### • 🔢 Matrix Operations (partial support)
 
-🧭 Vector Operations
+### • 🧭 Vector Operations
 
-⚛️ Complex Number Operations
+### • ⚛️ Complex Number Operations
 
-🚀 Features
-1. 🔢 Arithmetic Calculator (a)
+# 🚀 Features
+## 1. 🔢 Arithmetic Calculator (a)
 Executes basic arithmetic between two numbers:
 
-➕ Addition (+)
+### • ➕ Addition (+)
 
-➖ Subtraction (-)
+### • ➖ Subtraction (-)
 
-✖️ Multiplication (*)
+### • ✖️ Multiplication (*)
 
-➗ Division (/)
+### • ➗ Division (/)
 
-🧮 Modulus (%)
+### • 🧮 Modulus (%)
 
-🔺 Power (^)
+### • 🔺 Power (^)
 
-2. 🧮 Matrix Calculator (m)
+## 2. 🧮 Matrix Calculator (m)
 Supports operations between 2D matrices:
 
-➕ Addition (+) – same dimensions
+### • ➕ Addition (+) – same dimensions
 
-➖ Subtraction (-) – same dimensions
+### • ➖ Subtraction (-) – same dimensions
 
-✖️ Multiplication (*) – compatible dimensions
+### • ✖️ Multiplication (*) – compatible dimensions
 
-🔢 Sum of All Elements (^) – single matrix
+### • 🔢 Sum of All Elements (^) – single matrix
 
-🔷 Sum of Diagonal Elements (#) – trace
+### • 🔷 Sum of Diagonal Elements (#) – trace
 
-💡 Note:
+### • 💡 Note:
 Inverse, transpose, determinant, and scalar multiplication are not available.
 Matrix dimension compatibility is not auto-checked – ensure inputs are valid.
 
-3. 🧭 Vector Calculator (v)
+## 3. 🧭 Vector Calculator (v)
 Operates on 3D vectors:
 
-➕ Addition (+)
+### • ➕ Addition (+)
 
-➖ Subtraction (-)
+### • ➖ Subtraction (-)
 
-🔘 Dot Product (.)
+### • 🔘 Dot Product (.)
 
-🔄 Cross Product (*)
+### • 🔄 Cross Product (*)
 
-4. ⚛️ Complex Number Calculator (i)
+## 4. ⚛️ Complex Number Calculator (i)
 Handles operations between two complex numbers:
 
-➕ Addition
+### • ➕ Addition
 
-➖ Subtraction
+### • ➖ Subtraction
 
-✖️ Multiplication
+### • ✖️ Multiplication
 
-🛠️ How to Compile and Run
+# 🛠️ How to Compile and Run
 bash
 Copy code
 gcc main.c -o calc
@@ -81,13 +81,13 @@ Enter Operation to perform [+ for addition]
 Enter first number: 5
 Enter second number: 3
 Result: 8
-📌 Notes
+# 📌 Notes
 Matrices are dynamically allocated using malloc.
 
 All inputs are interactive via the terminal.
 
 Matrix dimensions must be manually validated by the user.
 
-👨‍💻 Author
+# 👨‍💻 Author
 Made by Soham Lodh
 Feel free to fork and extend the program!
