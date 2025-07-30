@@ -440,8 +440,11 @@ struct complex*elementi(){
 	a->img=j;
 	return a;
 }
-void printi(struct complex* a){
-	printf("%d+%di\n",a->real,a->img);
+void printi(struct complex a) {
+    if (a.img >= 0)
+        printf("%d+%di\n", a.real, a.img);
+    else
+        printf("%d%di\n", a.real, a.img);
 }
 struct complex*addi(struct complex*a,struct complex*b){
 	struct complex* result=(struct complex*)malloc(sizeof(struct complex));
