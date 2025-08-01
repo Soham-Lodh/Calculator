@@ -28,6 +28,7 @@ void aricalc();
 void matcalc();
 int** create2D(int,int);
 int** elements2D(int**,int,int);
+void transpose2D(int**,int,int);
 void print2D(int**,int,int);
 void add2D(int**,int**,int,int,int,int);
 void sub2D(int**,int**,int,int,int,int);
@@ -102,7 +103,7 @@ void matcalc(){
 	int** A;
 	int** B;
 	int a,b,c,d;
-	printf("Operation to perform\n[+ for addition]\n[-for subtraction]\n[* for multiplication]\n[^ for sum of all elements]\n[# for sum of diagonal elements]\n:- ");scanf(" %c",&o);
+	printf("Operation to perform\n[+ for addition]\n[-for subtraction]\n[* for multiplication]\n[^ for sum of all elements]\n[# for sum of diagonal elements]\n[$ for transpose]\n:- ");scanf(" %c",&o);
 	switch(o){
 		case '#':
 			printf("Number of rows of the matrix: ");scanf("%d",&a);
@@ -167,10 +168,37 @@ void matcalc(){
 			print2D(A,a,b);
 			adder(A,a,b);
 			break;
+		case '$':
+			printf("Number of rows of the matrix: ");scanf("%d",&a);
+			printf("Number of columns of the matrix: ");scanf("%d",&b);
+			A=create2D(a,b);
+			A=elements2D(A,a,b);
+			printf("A=\n");
+			print2D(A,a,b);
+			transpose2D(A,a,b);
+			break;
 		default:
 			printf("Invalid operation");
 			break;
 	}
+}
+void transpose2D(int** A,int a,int b){
+	int i,j;
+	int k=0;
+	int temp;
+	int** B=create2D(b,a);
+	if(a==b){
+		for(i=0;i<a;i++){
+		for(j=0;j<b;j++){
+			B[i][j]=A[j][i];
+		}
+	}
+	}
+	else{
+		
+	}
+	printf("After transpose: \n");
+	print2D(B,b,a);
 }
 void diagonal(int** A,int a,int b){
 	int i,j;
@@ -440,11 +468,11 @@ struct complex*elementi(){
 	a->img=j;
 	return a;
 }
-void printi(struct complex a) {
-    if (a.img >= 0)
-        printf("%d+%di\n", a.real, a.img);
+void printi(struct complex* a) {
+    if (a->img >= 0)
+        printf("%d+%di\n", a->real, a->img);
     else
-        printf("%d%di\n", a.real, a.img);
+        printf("%d%di\n", a->real, a->img);
 }
 struct complex*addi(struct complex*a,struct complex*b){
 	struct complex* result=(struct complex*)malloc(sizeof(struct complex));
