@@ -187,16 +187,11 @@ void transpose2D(int** A,int a,int b){
 	int k=0;
 	int temp;
 	int** B=create2D(b,a);
-	if(a==b){
 		for(i=0;i<a;i++){
 		for(j=0;j<b;j++){
-			B[i][j]=A[j][i];
-		}
-	}
-	}
-	else{
-		
-	}
+			B[j][i]=A[i][j];
+}
+}
 	printf("After transpose: \n");
 	print2D(B,b,a);
 }
