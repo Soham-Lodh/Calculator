@@ -35,6 +35,7 @@ void sub2D(int**,int**,int,int,int,int);
 void mul2D(int**,int**,int,int,int,int);
 void diagonal(int**,int,int);
 void adder(int**,int,int);
+void freeMatrix(int**,int);
 int main(){
 	char o;
 	printf("Import Calculator\n[a for arithmetic calculator]\n[m for matrix calculator]\n[v for vector calculator]\n[i for complex calculator]\n:- ");scanf(" %c",&o);
@@ -113,6 +114,7 @@ void matcalc(){
 			printf("A=\n");
 			print2D(A,a,b);
 			diagonal(A,a,b);
+			freeMatrix(A,a);
 			break;
 		case '+':
 			printf("Number of rows of 1st matrix: ");scanf("%d",&a);
@@ -128,6 +130,8 @@ void matcalc(){
 			printf("B=\n");
 			print2D(B,c,d);
 			add2D(A,B,a,b,c,d);
+			freeMatrix(A,a);
+			freeMatrix(B,c);
 			break;
 		case '-':
 			printf("Number of rows of 1st matrix: ");scanf("%d",&a);
@@ -143,6 +147,8 @@ void matcalc(){
 			printf("B=\n");
 			print2D(B,c,d);
 			sub2D(A,B,a,b,c,d);
+			freeMatrix(A,a);
+			freeMatrix(B,c);
 			break;
 		case '*':
 			printf("Number of rows of 1st matrix: ");scanf("%d",&a);
@@ -158,6 +164,8 @@ void matcalc(){
 			printf("B=\n");
 			print2D(B,c,d);
 			mul2D(A,B,a,b,c,d);
+			freeMatrix(A,a);
+			freeMatrix(B,c);
 			break;
 		case '^':
 			printf("Number of rows of the matrix: ");scanf("%d",&a);
@@ -167,6 +175,7 @@ void matcalc(){
 			printf("A=\n");
 			print2D(A,a,b);
 			adder(A,a,b);
+			freeMatrix(A,a);
 			break;
 		case '$':
 			printf("Number of rows of the matrix: ");scanf("%d",&a);
@@ -176,6 +185,7 @@ void matcalc(){
 			printf("A=\n");
 			print2D(A,a,b);
 			transpose2D(A,a,b);
+			freeMatrix(A,a);
 			break;
 		default:
 			printf("Invalid operation");
@@ -194,6 +204,7 @@ void transpose2D(int** A,int a,int b){
 }
 	printf("After transpose: \n");
 	print2D(B,b,a);
+	freeMatrix(B,b);
 }
 void diagonal(int** A,int a,int b){
 	int i,j;
@@ -247,6 +258,7 @@ void add2D(int** A,int** B,int a,int b,int c,int d){
 		}
 	printf("After addition: \n");
 	print2D(C,a,b);
+	freeMatrix(C,a);
 	}
 	else{
 		printf("Addition isn't possible\n");
@@ -263,6 +275,7 @@ void sub2D(int** A,int** B,int a,int b,int c,int d){
 		}
 	printf("After Subtraction: \n");
 	print2D(C,a,b);
+	freeMatrix(C,a);
 	}
 	else{
 		printf("Subtraction isn't possible\n");
@@ -281,6 +294,7 @@ void mul2D(int** A,int** B,int a,int b,int c,int d){
 		}
 		printf("After Multiplication: \n");
 		print2D(C,a,d);
+		freeMatrix(C,a);
 	}
 	else{
 		printf("Multiplication isn't possible\n");
@@ -295,6 +309,13 @@ void adder(int**A,int a,int b){
 		}
 	}
 	printf("Sum of all elements is %d",sum);
+}
+void freeMatrix(int** A, int a){
+	int i;
+	for(i=0;i<a;i++){
+		free(A[i]);
+	}
+	free(A);
 }
 void vectorcalc(){
 	struct vector*A;
