@@ -220,9 +220,9 @@ void diagonal(int** A,int a,int b){
 }
 int** create2D(int a,int b){
 	int i,j;
-	int** temp=(int**)malloc(sizeof(int*));
+	int** temp=(int**)malloc(a*sizeof(int*));
 	for(i=0;i<a;i++){
-		temp[i]=(int*)malloc(sizeof(int));
+		temp[i]=(int*)malloc(b*sizeof(int));
 		for(j=0;j<b;j++){
 			temp[i][j]=0;
 		}
